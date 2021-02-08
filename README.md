@@ -1,32 +1,22 @@
-# EZZorro
-ng zorro
-
-## Steps:
-    ng new ezproject  
-    cd ezproject  
-    ng add ng-zorro-antd  
-    ng serve  
-
-## Components:
-1. login
-    ng g ng-zorro-antd:form-normal-login pages/loginform001 -m pages/welcome  
-2. button 
-    ng g ng-zorro-antd:button-icon pages/welcome/button001 -m pages/welcome  
-3. navbar
-    ng g ng-zorro-antd:menu-inline pages/welcome/navbar001 -m pages/welcome  
-4. navbar light/dark
-    ng g ng-zorro-antd:menu-theme pages/welcome/navbar002 -m pages/welcome
-5. paging
-    ng g ng-zorro-antd:pagination-basic pages/welcome/paging001 -m pages/welcome
-6. stepbar
-    ng g ng-zorro-antd:steps-simple pages/welcome/stepbar001 -m pages/welcome
-7. Slider
-    ng g ng-zorro-antd:slider-basic pages/welcome/slider001 -m pages/welcome
-8. Switch
-    ng g ng-zorro-antd:switch-text pages/welcome/switch001 -m pages/welcome
-9. Transfer
-    ng g ng-zorro-antd:transfer-advanced pages/welcome/transfer001 -m pages/welcome
-10. timeline
-    ng g ng-zorro-antd:timeline-color pages/welcome/timeline001 -m pages/welcome
-11. Countdown
-    ng g ng-zorro-antd:statistic-countdown pages/welcome/countdown001 -m pages/welcome
+# CSYE_BVE  
+  
+## Contents  
+### Assignment 2 Rolling Ball Games  
+Five significant feature enhancements for Learning Unity Assignment  
+  
+1. Lift platform (move up and down).  
+2. Rotate cuboid (rotate).  
+3. Translation cuboid (move left/right or forward/back).  
+4. Display A Timer text .  
+5. Display/disappear player Status text.  
+6. Restart the game button.  
+7. Deceleration zone (After entering the zone, player is added a reverse direction force which will Slow down or even rebound player).  
+8. Acceleration Slope (Player will move faster on the slope).  
+9. Player will get bigger and change color when “eat” first 4 Pick Ups, and recover to original size and color when “eat” the following Pick Ups.  
+  
+## LICENSE
+MIT License  
+  
+## gitignore  
+gitignore is for unity and unreal  
+  
