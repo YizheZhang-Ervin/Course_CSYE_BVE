@@ -1,7 +1,7 @@
 # CSYE_BVE  
   
 ## Contents  
-### Assignment 2 Rolling Ball Games  
+### Assignment 2 Roll a Ball Games  
 Five significant feature enhancements for Learning Unity Assignment  
   
 1. Lift platform (move up and down).  
@@ -14,6 +14,9 @@ Five significant feature enhancements for Learning Unity Assignment
 8. Acceleration Slope (Player will move faster on the slope).  
 9. Player will get bigger and change color when “eat” first 4 Pick Ups, and recover to original size and color when “eat” the following Pick Ups.  
   
+YouTube Video   
+https://www.youtube.com/watch?v=4p58D8xAaqE  
+
 ## LICENSE
 MIT License  
   
