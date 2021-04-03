@@ -12,10 +12,11 @@ public class GamePanel : MonoBehaviour
 
     private void Awake(){
         _instance = this;
+        hp_parent = transform.Find("HP");
     }
 
     public void Start(){
-        hp_parent = transform.Find("HP");
+        
     }
 
     public void ResetHP(){

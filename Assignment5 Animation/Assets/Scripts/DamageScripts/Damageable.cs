@@ -14,13 +14,13 @@ public class Damageable : MonoBehaviour
         this.defaultHealth = health;
     }
 
-    public void TakeDamage(int damage,string resetPos){
+    public void TakeDamage(int damage,string resetPos="check1"){
         health--;
         if(health==0){
             if(OnDead!=null){
                 OnDead(resetPos);
             }
-        }else{
+        }else if(health>0){
             if(OnHurt!=null){
                 OnHurt();
             }

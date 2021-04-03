@@ -12,7 +12,7 @@ public class Damage : MonoBehaviour
         if(damageable==null){
             return;
         }
-        damageable.TakeDamage(this.damage,resetPos);
+        damageable.TakeDamage(damage,resetPos);
     }
 
     public void OnDamage(GameObject[] gameObjects){

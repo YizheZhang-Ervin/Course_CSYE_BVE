@@ -138,7 +138,6 @@ public class PlayerController : MonoBehaviour
         GamePanel._instance.UpdateHP(playerDamageable.health);
         animator.SetBool("IsDead",true);
         animator.SetTrigger("deadTrigger");
-
         // set status
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
@@ -146,7 +145,7 @@ public class PlayerController : MonoBehaviour
 
         // set reset position
         this.resetPos = resetPos;
-        Invoke("ResetDead",2);
+        Invoke("ResetDead",1.8f);
     }
 
     public void ResetDead(){
