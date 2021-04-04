@@ -27,6 +27,7 @@ public class Monster1 : MonoBehaviour
     public float attackRange = 2;
     public float listenRange = 2;
     public Transform attackTarget;
+    GameObject keyItem;
 
     void Start(){
         rb = transform.GetComponent<Rigidbody2D>();
@@ -168,6 +169,13 @@ public class Monster1 : MonoBehaviour
         animator.SetTrigger("deadTrigger");
         transform.GetComponent<BoxCollider2D>().enabled = false;
         rb.gravityScale = 0;
+
+        // drop key
+        keyItem = Resources.Load<GameObject>("Prefab/Key");
+        GameObject key1 =  GameObject.Instantiate(keyItem);
+        key1.transform.position = transform.position;
+
         Destroy(gameObject,2f);
+
     }
 }

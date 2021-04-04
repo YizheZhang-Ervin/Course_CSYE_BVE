@@ -11,6 +11,7 @@ public class movePlatform : MonoBehaviour
     Rigidbody2D rb;
     public ContactFilter2D cf;
     ContactPoint2D[] cp = new ContactPoint2D[10];
+    public bool triggerMove = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,9 @@ public class movePlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!triggerMove){
+            return;
+        }
         if(isMoveToEnd){
             transform.position = Vector3.MoveTowards(transform.position,endPos,speed*Time.deltaTime);
             if(transform.position==endPos){
