@@ -12,8 +12,10 @@ public class PlayerController : MonoBehaviour
     public float speedY = 7f;
     public float speedTimes = 7f;
     GameObject playerTrail;
+    GameObject wings;
     Rigidbody2D rb;
     SpriteRenderer sr;
+    SpriteRenderer wingsSR;
     Animator animator;
     float timerY;
     bool isGround;
@@ -28,6 +30,7 @@ public class PlayerController : MonoBehaviour
     GameObject bulletPrefab;
     float attackTime = 2;  // attack cd time
     bool attackIsReady = true; 
+    AudioSource audioSound;
 
     // Start is called before the first frame update
     void Start(){
@@ -35,6 +38,7 @@ public class PlayerController : MonoBehaviour
         sr = transform.GetComponent<SpriteRenderer>();
         animator = transform.GetComponent<Animator>();
         playerTrail = transform.Find("Trail").gameObject;
+        wings = transform.Find("Wings").gameObject;
         playerDamageable = transform.GetComponent<Damageable>();
         playerDamageable.OnHurt += this.OnHurt;
         playerDamageable.OnDead += this.OnDead;
@@ -42,6 +46,8 @@ public class PlayerController : MonoBehaviour
         attackRange = transform.Find("attackRange").GetComponent<AttackRange>();
         bulletPos = transform.Find("bulletPos");
         playerDamage = transform.GetComponent<Damage>();
+        audioSound = transform.GetComponent<AudioSource>();
+        wingsSR = transform.Find("Wings").GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -101,6 +107,8 @@ public class PlayerController : MonoBehaviour
         // Debug.DrawLine(transform.position,transform.position+Vector3.down*1.5f,Color.red);
         isGround = rh;
         animator.SetBool("IsJump",!isGround);
+        wings.SetActive(!isGround);
+        wingsSR.flipX = sr.flipX;
     }
 
     public void checkCanJump(){
@@ -212,6 +220,14 @@ public class PlayerController : MonoBehaviour
 
         }
 
+    }
+
+    public void AttackSound(){
+        AudioClip ac = Resources.Load<AudioClip>("SoundEffects/electronic_02");
+        if(ac==null){
+            return;
+        }
+        audioSound.PlayOneShot(ac);
     }
 }
 
