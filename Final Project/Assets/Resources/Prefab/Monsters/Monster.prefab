@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 6600456263920746988}
   - component: {fileID: 5431403358364991596}
   m_Layer: 0
-  m_Name: Monster1
+  m_Name: Monster
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,7 +129,7 @@ Animator:
   m_GameObject: {fileID: 6600456263920746980}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 02d0a152643ab6c41bd82f47886a05b0, type: 2}
+  m_Controller: {fileID: 9100000, guid: b9af96ca7744f4b48816d02b7bc85b21, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
