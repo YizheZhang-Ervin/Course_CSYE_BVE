@@ -148,10 +148,10 @@ public class Monster1 : MonoBehaviour
     }
 
     private void OnDrawGizmosSelected(){
-        Handles.color = new Color(Color.red.r,Color.red.g,Color.red.b,0.2f);
-        Handles.DrawSolidDisc(transform.position,Vector3.forward,attackRange);
-        Handles.color = new Color(Color.green.r,Color.green.g,Color.green.b,0.2f);
-        Handles.DrawSolidDisc(transform.position,Vector3.forward,listenRange);
+        // Handles.color = new Color(Color.red.r,Color.red.g,Color.red.b,0.2f);
+        // Handles.DrawSolidDisc(transform.position,Vector3.forward,attackRange);
+        // Handles.color = new Color(Color.green.r,Color.green.g,Color.green.b,0.2f);
+        // Handles.DrawSolidDisc(transform.position,Vector3.forward,listenRange);
     }
 
     public void PutDamage(){

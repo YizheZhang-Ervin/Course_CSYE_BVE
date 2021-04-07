@@ -14,7 +14,7 @@ public class Damageable : MonoBehaviour
         this.defaultHealth = health;
     }
 
-    public void TakeDamage(int damage,string resetPos="check1"){
+    public void TakeDamage(int damage,string resetPos){
         health--;
         if(health==0){
             if(OnDead!=null){

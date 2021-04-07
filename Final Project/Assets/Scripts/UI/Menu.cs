@@ -14,11 +14,16 @@ public class Menu : MonoBehaviour
     }
 
     public void OnExitClick(){
-        if(Application.isEditor){
+        // if(Application.isEditor){
+        //     EditorApplication.isPlaying = false;
+        // }else{
+        //     Application.Quit();
+        // }
+        #if UNITY_EDITOR
             EditorApplication.isPlaying = false;
-        }else{
+        #else
             Application.Quit();
-        }
+        #endif
     
     }
 

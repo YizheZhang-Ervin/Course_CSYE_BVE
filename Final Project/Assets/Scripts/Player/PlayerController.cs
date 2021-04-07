@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     GameObject playerTrail;
     GameObject wings;
     GameObject shield;
+    GameObject fireShield;
     Rigidbody2D rb;
     SpriteRenderer sr;
     SpriteRenderer wingsSR;
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour
         playerTrail = transform.Find("Trail").gameObject;
         wings = transform.Find("Wings").gameObject;
         shield = transform.Find("Shield").gameObject;
+        fireShield = transform.Find("fireShield").gameObject;
         playerDamageable = transform.GetComponent<Damageable>();
         playerDamageable.OnHurt += this.OnHurt;
         playerDamageable.OnDead += this.OnDead;
@@ -101,8 +103,10 @@ public class PlayerController : MonoBehaviour
         if(Input.GetButton("Sprint")){
             x *= speedTimes;
             playerTrail.SetActive(true);
+            fireShield.SetActive(true);
         }else{
             playerTrail.SetActive(false);
+            fireShield.SetActive(false);
         }
         return x;
     }
