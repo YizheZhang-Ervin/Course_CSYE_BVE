@@ -24,6 +24,8 @@ public class monsterDragon : MonoBehaviour
     GameObject cinemachine;
     GameObject npc;
     Text txt;
+    Material material;
+	float fade = 1f;
 
     void Start(){
         rb = transform.GetComponent<Rigidbody2D>();
@@ -42,6 +44,7 @@ public class monsterDragon : MonoBehaviour
         cinemachine = GameObject.Find("CineMachine");
         npc = GameObject.Find("NPC");
         txt = GameObject.Find("keyNum").GetComponent<Text>();
+        material = GetComponent<SpriteRenderer>().material;
     }
 
     void Update(){
@@ -203,6 +206,11 @@ public class monsterDragon : MonoBehaviour
                 break;
             case EnemyStatus.Dead:
                 animator.SetBool("isDead",true);
+                fade -= Time.deltaTime;
+                if(fade<=0f){
+                    fade = 0f;
+                }
+                material.SetFloat("_Fade",fade);
                 break;
             case EnemyStatus.Hurt:
                 es = EnemyStatus.Idle;

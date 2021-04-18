@@ -11,6 +11,13 @@ public class PlayerMovement : MonoBehaviour {
 	float horizontalMove = 0f;
 	bool jump = false;
 	bool crouch = false;
+	Material material;
+	bool isDissolving = false;
+	float fade = 1f;
+
+	void Start(){
+		material = GetComponent<SpriteRenderer>().material;
+	}
 
 	// Update is called once per frame
 	void Update () {
@@ -31,6 +38,18 @@ public class PlayerMovement : MonoBehaviour {
 		} else if (Input.GetButtonUp("Crouch"))
 		{
 			crouch = false;
+		}
+
+		if(Input.GetKeyDown(KeyCode.Space)){
+			isDissolving = true;
+		}
+		if(isDissolving){
+			fade -= Time.deltaTime;
+			if(fade<=0f){
+				fade = 0f;
+				isDissolving = false;
+			}
+			material.SetFloat("_Fade",fade);
 		}
 
 	}

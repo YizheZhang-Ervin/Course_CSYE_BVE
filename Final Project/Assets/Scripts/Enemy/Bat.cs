@@ -24,6 +24,8 @@ public class Bat : MonoBehaviour
     public Transform bulletPos;
     GameObject coinItem;
     AudioSource audioSound;
+    Material material;
+	float fade = 1f;
 
     void Start(){
         rb = transform.GetComponent<Rigidbody2D>();
@@ -35,6 +37,7 @@ public class Bat : MonoBehaviour
         damageable = transform.GetComponent<Damageable>();
         damageable.OnDead += OnDead;
         audioSound = GameObject.Find("Sound").GetComponent<AudioSource>();
+        material = GetComponent<SpriteRenderer>().material;
     }
 
     void Update(){
@@ -62,6 +65,12 @@ public class Bat : MonoBehaviour
                 break;
             case EnemyStatus.Dead:
                 animator.SetBool("isDead",true);
+                fade -= Time.deltaTime;
+                if(fade<=0f){
+                    fade = 0f;
+                }
+                material.SetFloat("_Fade",fade);
+                Debug.Log(fade);
                 break;
         }
         if(es!=EnemyStatus.Attack){
@@ -78,6 +87,9 @@ public class Bat : MonoBehaviour
     }
 
     public void UpdateListener(){
+        if(es == EnemyStatus.Dead){
+            return;
+        }
         if(attackTarget==null){
             return;
         }

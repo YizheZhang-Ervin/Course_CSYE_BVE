@@ -29,6 +29,8 @@ public class Monster1 : MonoBehaviour
     public Transform attackTarget;
     GameObject keyItem;
     AudioSource audioSound;
+    Material material;
+	float fade = 1f;
 
     void Start(){
         rb = transform.GetComponent<Rigidbody2D>();
@@ -42,6 +44,7 @@ public class Monster1 : MonoBehaviour
         damageable.OnDead += OnDead;
         damageable.OnHurt += OnHurt;
         audioSound = GameObject.Find("Sound").GetComponent<AudioSource>();
+        material = GetComponent<SpriteRenderer>().material;
     }
 
     void Update(){
@@ -108,6 +111,11 @@ public class Monster1 : MonoBehaviour
                 break;
             case EnemyStatus.Dead:
                 animator.SetBool("isDead",true);
+                fade -= Time.deltaTime;
+                if(fade<=0f){
+                    fade = 0f;
+                }
+                material.SetFloat("_Fade",fade);
                 break;
             case EnemyStatus.Hurt:
                 es = EnemyStatus.Idle;

@@ -8,6 +8,9 @@ public class Damage : MonoBehaviour
     public string resetPos;
 
     public void OnDamage(GameObject gameObject){
+        if(!gameObject){
+            return;
+        }
         Damageable damageable = gameObject.GetComponent<Damageable>();
         if(damageable==null){
             return;
