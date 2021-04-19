@@ -70,7 +70,6 @@ public class Bat : MonoBehaviour
                     fade = 0f;
                 }
                 material.SetFloat("_Fade",fade);
-                Debug.Log(fade);
                 break;
         }
         if(es!=EnemyStatus.Attack){
