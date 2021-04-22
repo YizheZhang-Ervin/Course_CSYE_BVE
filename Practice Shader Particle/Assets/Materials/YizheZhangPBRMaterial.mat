@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4625446171795477150
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: YizheZhangPBRMaterial
+  m_Shader: {fileID: -6465566751694194690, guid: d46a38f6fd053df488c35770fafe28b2,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_3750C1DC:
+        m_Texture: {fileID: 2800000, guid: 16b1ca2b50d83e747818a2d6d4c2bb33, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_6A258FB5:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_A0E58B63:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_CADCC885:
+        m_Texture: {fileID: 2800000, guid: df6fed94c39deed40843b6b1fcf0ca9a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_D5820FFD:
+        m_Texture: {fileID: 2800000, guid: b06c51bbcd097084ea4f5f284baeb1e4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_1C290B40: 1
+    - Vector1_224FAD5B: 0
+    - Vector1_28CAABD7: 16
+    - Vector1_4A7134EB: 1
+    - Vector1_5AFAEE96: 2
+    - Vector1_5B4CA7CF: 1
+    - Vector1_63C471CC: 2
+    - Vector1_B653066A: 1
+    - Vector1_BBAB1300: 0.2
+    - Vector1_BC52D53D: 0.3
+    - Vector1_BCABBF1: 0
+    - Vector1_C974B53C: 0.2
+    - Vector1_CF841820: 0.9
+    - Vector1_D35657BE: 1
+    - Vector1_D7BC73F6: 0.48
+    - Vector1_E5D33552: 1
+    m_Colors:
+    - Color_A894D6FD: {r: 0, g: 0, b: 0, a: 0}
+    - Color_BA8B6F94: {r: 0, g: 0, b: 0, a: 0}
+    - Color_C4F76EF0: {r: 1, g: 1, b: 1, a: 0}
