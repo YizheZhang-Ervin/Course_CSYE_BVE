@@ -24249,6 +24249,11 @@ PrefabInstance:
       propertyPath: goalNum
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4972019281002627227, guid: fefdadb47f4117e43bdba1c21322d703,
+        type: 3}
+      propertyPath: dialogContent
+      value: 'Move: Direction&Space Button, Attack:Z&C Button'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fefdadb47f4117e43bdba1c21322d703, type: 3}
 --- !u!1001 &5472501504541568928
